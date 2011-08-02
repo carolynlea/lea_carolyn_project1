@@ -1,62 +1,67 @@
-function doChange(srcE, targetId){
+//Project 1
+//Carolyn Lea
+//Visual Frameworks 1108
+//August 2, 2011
+
+function doChange(srcList, targetId){
 	
-	var val = srcE.options[srcE.selectedIndex].value;
-	var targetE = document.getElementById(targetId);
+	var val = srcList.options[srcList.selectedIndex].value;
+	var targetList = document.getElementById(targetId);
 	alert("You have chosen " + val + ".  Press ok to continue.");
-	removeAll(targetE);
+	removeAll(targetList);
 	if(val == 'animal')
 	{
-		addOption('bears', targetE);
-		addOption('crabs', targetE);
-		addOption('fish', targetE);
-		addOption('lions', targetE);
-		addOption('rats', targetE);
-		addOption('wolves', targetE);	
+		addOption('bears', targetList);
+		addOption('crabs', targetList);
+		addOption('fish', targetList);
+		addOption('lions', targetList);
+		addOption('rats', targetList);
+		addOption('wolves', targetList);	
 
 	}
 	else if(val == 'human')
 	{
-		addOption('bandits', targetE);
-		addOption('conjurers', targetE);
-		addOption('marauders', targetE);
-		addOption('necromancers', targetE);
-		addOption('quest giver', targetE);
-		addOption('trainer', targetE);
+		addOption('bandits', targetList);
+		addOption('conjurers', targetList);
+		addOption('marauders', targetList);
+		addOption('necromancers', targetList);
+		addOption('quest giver', targetList);
+		addOption('trainer', targetList);
 	}
 	else if(val == 'mythic')
 	{
-		addOption('goblins', targetE);
-		addOption('imps', targetE);
-		addOption('minotaurs', targetE);
-		addOption('ogres', targetE);
-		addOption('unicorn', targetE);
+		addOption('goblins', targetList);
+		addOption('imps', targetList);
+		addOption('minotaurs', targetList);
+		addOption('ogres', targetList);
+		addOption('unicorn', targetList);
 	}
 	else if(val == 'undead')
 	{
-		addOption('skeletons', targetE);
-		addOption('vampires', targetE);
-		addOption('wraiths', targetE);
-		addOption('zombies', targetE);
+		addOption('skeletons', targetList);
+		addOption('vampires', targetList);
+		addOption('wraiths', targetList);
+		addOption('zombies', targetList);
 	}
  };
 
-function addOption(value, e){
+function addOption(value, list){
 	
 	var o = new Option(value);
 	try
 	{
-		e.add(o);
+		list.add(o);
 	}
-	catch(ee)
+	catch(listing)
 	{
-		e.add(o, null);
+		list.add(o, null);
 	}
 };
  
-function removeAll(e){
+function removeAll(list){
 	
-	for(var i = 0, limit = e.options.length; i < limit - 1; ++i)
+	for(var i = 0, limit = list.options.length; i < limit - 1; ++i)
 	{
-		e.remove(1);
+		list.remove(1);
 	}
 };
