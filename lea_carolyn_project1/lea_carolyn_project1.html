@@ -12,84 +12,81 @@
 	</head>
 	
 	<body>
-		
 		<header>
 			<h1>Add Dungeon</h1>
 		</header>
-		
-	<form>
-		
-		<fieldset>
-			<legend>Dungeon</legend>
-				<label for=name>Name</label>
-				<input id=name name=name type=text placeholder="e.g. Fort Metropolis"
+		<form action="#">
+			<fieldset>
+				<legend>Dungeon</legend>
+					<label for=name>Name</label>
+					<input id=name name=name type=text placeholder="e.g. Fort Metropolis"
 					required><br/>
 					
-				<label for="dungeon type">Dungeon Type</label>
-				<select>
-				<option value ="campsite">Campsite</option>
-				<option value ="cave">Cave</option>
-				<option value ="fort">Fort</option>
-				<option value ="mine">Mine</option>
-				<option value ="portal">Portal</option>
-				<option value ="ruin">Ruin</option>
-				</select><br/>
+					<label for="dungeon_type">Dungeon Type</label>
+					<select>
+						<option value ="campsite">Campsite</option>
+						<option value ="cave">Cave</option>
+						<option value ="fort">Fort</option>
+						<option value ="mine">Mine</option>
+						<option value ="portal">Portal</option>
+						<option value ="ruin">Ruin</option>
+						</select><br/>
 				
-				<label for="location">Location</label>
-				<select>
-				<option value ="north area">North Area</option>
-				<option value ="northeast area">NorthEast Area</option>
-				<option value ="northwest area">NorthWest Area</option>
-				<option value ="east area">East Area</option>
-				<option value ="south area">South Area</option>
-				<option value ="southeast area">SouthEast Area</option>
-				<option value ="southwest area">SouthWest Area</option>
-				<option value ="west area">West Area</option>
-				</select>
-		</fieldset>
+					<label for="location">Location</label>
+					<select>
+						<option value ="north_area">North Area</option>
+						<option value ="northeast_area">NorthEast Area</option>
+						<option value ="northwest_area">NorthWest Area</option>
+						<option value ="east_area">East Area</option>
+						<option value ="south_area">South Area</option>
+						<option value ="southeast_area">SouthEast Area</option>
+						<option value ="southwest_area">SouthWest Area</option>
+						<option value ="west_area">West Area</option>
+					</select><br/>
+				
+					<label for="date_found">Date Found</label> 
+					<input id="date_found" type="date"/>
+				
+				</fieldset>
 			
-		<fieldset>
-			<legend>Occupant</legend>
-				<label for="populated">Populated?</label>
-				<label for="friendly">Friendly?</label>
-				
-				<ol>
-					<li><input id=animal name=occupant type=radio>
-						<label for="animal">Animal</label>
-					</li>
-				
-					<li><input id=humanoid name=occupant type=radio>
-						<label for="human">Humanoid</label>
-					</li>
-				
-					<li><input id=mythic name=occupant type=radio>
-						<label for="mythic">Mythic</label>
-					</li>
-				
-					<li><input id=undead name=occupant type=radio>
-						<label for="undead">Undead</label>
-					</li>
-				</ol>
-			</fieldset>
+				<fieldset>
+					<legend>Occupants</legend>
 			
-			<fieldset>
-					<label for="loot rating">On a scale of 1 being "not worth it" to 10 being 		"the best booty ever", rate the loot found in this dungeon:
-					</label>
-					<input type="range" min="1" max="10" name="loot rating"type"range">	
-			</fieldset>
+					<label for="populated">Populated?</label>
+					<input id=populated name=occupants type=checkbox>
+				
+					<label for="friendly">Friendly?</label>
+					<input id=friendly name=occupants type=checkbox><br/>
+				
+					<select name="selOne" id="selOne" onchange="doChange(this, 'selTwo')">
+					<option value="default">---Occupant Type---</option>
+					<option value="animal">Animal</option>
+					<option value="human">Human</option>
+					<option value="mythic">Mythic</option>
+					<option value="undead">Undead</option>
+					</select>
+					<select name="selTwo" id="selTwo">
+					<option value="default">---Choose One---</option>
+					</select>
+				</fieldset>
 			
-			<fieldset>
-				<label for="notes">NOTES</label>
-			</fieldset>
+				<fieldset>
+					<legend>Loot</legend>
+						<label for="loot_rating">On a scale of 1 being "NOT worth it!" to 10 being 		"the BEST booty ever!", rate the loot found in this dungeon:
+						</label>
+						<input type="range" min="1" max="10" name="loot_rating"type"range">	
+				</fieldset>
 			
-			<fieldset>
-				<button type=submit>Add Dungeon</button>
-			</fieldset>
-	</form>	
-	
-		<footer>
-		</footer>
-
+				<fieldset>
+					<legend>Notes</legend>
+						<p>Jot down any remarkable loot, if dungeon is near a landmark, or anything else you want to remember.</p>
+						<textarea></textarea>
+				</fieldset>
+			
+				<fieldset>
+					<button type=submit>Add Dungeon</button>
+				</fieldset>
+		</form>
 	</body>
 </html>
 
