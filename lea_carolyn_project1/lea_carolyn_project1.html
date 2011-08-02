@@ -1,26 +1,32 @@
 <!DOCTYPE html>
+<!--Required doctype above.-->
 <html lang="en">
-<!--Project 1
+<!--Required information:
+	Project 1
 	Carolyn Lea
 	Visual Frameworks 1108
 	August 2, 2011-->
+	
+<!--Required head section containing meta tags, title and links to css and javascript.-->
 
 	<head>
 		<meta charset="utf-8"/>
     	<title>My Dungeon Chronicler</title>
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
+		<meta name="This is a simple dungeon tracker application for hard core adventurers." content="" />
+		<meta name="dungeon tracker" content="" />
 		<meta name="robots" content="" />
     	<link href="css/styles.css" rel="stylesheet" type="text/css" />
 		<script src="js/main.js" type="text/javascript" ></script>
 	</head>
 	
+<!--This begins required body section containing the page header, form tags and defined field sets.-->
+	
 	<body>
 		<header>
-			<h1>Add Dungeon</h1>
+			<h1>Add Dungeon</h1>  <!--Required title of my page.-->
 		</header>
-		<form action="#">
-			<fieldset>
+		<form action="#">  <!--Required form tag.-->
+			<fieldset>  <!--Basic information about each Dungeon.-->
 				<legend>Dungeon</legend>
 					<label for="name">Name</label>
 					<input id="name" name="name" type="text" placeholder="e.g. Fort Metropolis" required/><br/>
@@ -87,15 +93,15 @@
 			
 			<fieldset>
 				<legend>Notes</legend>
-					<p>Jot down any remarkable loot, if dungeon is near a landmark, or 
-							anything else you want to remember.
-					</p>
-					<textarea></textarea>
+					<textarea placeholder="remarkable loot, landmarks, or anything else you want to remember."></textarea>
 			</fieldset>
 			
 			<fieldset>
 				<button type="submit">Add Dungeon</button>
 			</fieldset>
+			
+<!--All the ending tags.-->
+
 		</form>
 	</body>
 </html>
